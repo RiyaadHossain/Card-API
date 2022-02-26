@@ -13,6 +13,7 @@ const favCard = () => {
     errorMsg.innerHTML = `🤐 Please Input equal or smaller number than <span class="text-success">"52"</span>`;
     cardInput.value = "";
   } else {
+    mainDiv.textContent = "";
     errorMsg.textContent = "";
     const url = `https://deckofcardsapi.com/api/deck/new/draw/?count=${cardInput.value}`;
     fetch(url)
