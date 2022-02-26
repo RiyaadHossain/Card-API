@@ -5,7 +5,7 @@ const favCard = () => {
   const cardValue = parseInt(cardInput.value);
   if (isNaN(cardValue) || cardValue < 1 || cardValue == '') {
     mainDiv.textContent = "";
-    errorMsg.innerHTML = `😪 Please Input a valid Number not <span class="text-warning"> "${cardValue}"</span>`;
+    errorMsg.innerHTML = `😪 Please Input a valid Number not <span class="text-warning"> "${cardInput.value}"</span>`;
     cardInput.value = "";
   } else if (cardValue > 52) {
     errorMsg.textContent = "";
@@ -25,7 +25,6 @@ const favCard = () => {
 
 const printCard = (cards) => {
   cards.forEach((element) => {
-    console.log(element);
     const cardDiv = document.createElement("div");
     cardDiv.className = "col-4";
     cardDiv.className = "mb-3";
