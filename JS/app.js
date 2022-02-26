@@ -2,8 +2,8 @@ const mainDiv = document.getElementById("card-container");
 const cardInput = document.getElementById("card-input");
 const errorMsg = document.getElementById("error-msg");
 const favCard = () => {
-  const cardValue = cardInput.value;
-  if (isNaN(cardValue) || cardValue < 1) {
+  const cardValue = parseInt(cardInput.value);
+  if (isNaN(cardValue) || cardValue < 1 || cardValue == '') {
     mainDiv.textContent = "";
     errorMsg.innerHTML = `😪 Please Input a valid Number not <span class="text-warning"> "${cardValue}"</span>`;
     cardInput.value = "";
